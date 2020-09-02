@@ -1,37 +1,33 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width= , initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <form action=" " method="">
-        <label for="name">first name </label>
-       <input type="text" name="name" id="name">
-       <br>
-        <button type="submit">submit</button>
-       <input type="submit">
-</body> 
-</html> -->
 <!DOCTYPE html>
-<html>
-    <title>
-        my titile
-    </title>
-    <body>
-        my body
-        <a href="ind.html">paytm mal</a>
-        <p>For 2nd page </p>
-        <br>
-        <a href="Example%201/index.html">2nd example</a>
-        <br>
-        <p>For 3rd page </p>
-        <br>
-        <a href="Example%202/index.html">3rd example</a>
-        <p>For 4th page </p>
-        <br>
-        <a href="Example%203/index.html">4th example</a>
-    </body>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> question to be visited </h1>
+  </body>
+  <script>
+  function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
+readTextFile("file://questions.txt");
+</script>
+
+
+
 </html>
