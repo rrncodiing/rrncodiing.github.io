@@ -33,9 +33,9 @@
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                var res = allText.split("\t|\n");
+                var res = allText.split("\n");
                 var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
-                for (var i = 0, j =1; i < res.length; i+=2,j++) {
+                for (var i = 0, j =1; i < res.length - 1; i+=3,j++) {
                   var newRow   = tableRef.insertRow();
                   var newCell0  = newRow.insertCell(0);
                   newCell0.appendChild(document.createTextNode(j));
@@ -43,8 +43,8 @@
                   newCell1.appendChild(document.createTextNode(res[i]));
                   var newCell2  = newRow.insertCell(2);
                   var x = document.createElement("A");
-                  var t = document.createTextNode("Question_Link");
-                  x.setAttribute("href", res[i+1]);
+                  var t = document.createTextNode(res[i+1]);
+                  x.setAttribute("href", res[i+2]);
                   x.appendChild(t);
                   document.body.appendChild(x);
                   newCell2.appendChild(x);
