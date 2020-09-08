@@ -6,6 +6,8 @@ https://codeforces.com/blog/entry/9901
 Rishab:
 Xor related problems:
 https://drschwad.github.io/2019-08-06-z2-space-xor-trick/
+
+Rishab
 Dynammic programming
 https://codeforces.com/blog/entry/43256
 
