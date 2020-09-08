@@ -37,14 +37,23 @@
                 var res = allText.split("\n");
                 var tableRef = document.getElementById('table').getElementsByTagName('tbody')[0];
                 for (var i = 0, j =1; i < res.length - 1; i+=3,j++) {
+                  while (res[i].length == 0) {
+                    i++;
+                  }
                   var newRow   = tableRef.insertRow();
                   var newCell0  = newRow.insertCell(0);
                   newCell0.appendChild(document.createTextNode(j));
                   var newCell1  = newRow.insertCell(1);
                   newCell1.appendChild(document.createTextNode(res[i]));
+                  while (res[i+1].length == 0) {
+                    i++;
+                  }
                   var newCell2  = newRow.insertCell(2);
                   var x = document.createElement("A");
                   var t = document.createTextNode(res[i+1]);
+                  while (res[i+2].length == 0) {
+                    i++;
+                  }
                   x.setAttribute("href", res[i+2]);
                   x.appendChild(t);
                   document.body.appendChild(x);
