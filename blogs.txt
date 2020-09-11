@@ -11,3 +11,6 @@ Rishab
 Dynammic programming
 https://codeforces.com/blog/entry/43256
 
+Ritik
+Argument Exchange example
+https://www.youtube.com/watch?v=Oq1seKJvfQU&t=2640s
